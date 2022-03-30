@@ -1,0 +1,494 @@
+/* IMPORT GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap');
+
+/* FIN IGF */
+
+/* RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+li a:hover {
+    color: var(--blue);
+}
+
+/* FIN RESETS */
+
+/* ROOT */
+:root {
+    --light-blue: #3636e4;
+    --blue: #1616C7;
+    --dark-blue: #0505418f;
+    --grey: #c8c8c8;
+    --dark-grey: #a6a6a6;
+    --darkest-grey: #9e9e9e;
+
+}
+
+/* FIN ROOT*/
+
+/* BODY */
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+/* FIN BODY */
+
+/* NAV */
+
+.navDiv {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    background-color: white;
+    filter: drop-shadow(0 0 10px var(--grey));
+    margin-bottom: 2.5%;
+
+    padding: 1.5% 0 1.5%;
+}
+
+.navDiv nav{
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.dropDown li:hover{
+    color: var(--blue);
+}
+
+.navDiv ul li:hover .dropDown{
+    display: flex;
+}
+
+.navDiv h1{
+
+    font-weight: 600;
+    transition: 0.5s;
+
+}
+
+.navDiv h1:hover{
+
+    transform: scale(1.05, 1.05);
+
+}
+
+.navDiv h1 span{
+
+    font-size: 0.7em;
+    font-weight: 500;
+    font-style: italic;
+    padding-left: 3%;
+    color: var(--blue);
+
+}
+
+.navDiv nav ul {
+
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+}
+
+.navDiv nav ul li {
+
+    font-size: 1.2em;
+    font-weight: 500;
+    position: relative;
+    
+}
+
+.navDiv nav ul li:first-of-type a {
+
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.navDiv nav ul li:first-of-type a:hover {
+
+    color: black;
+}
+
+/* SEARCH BAR */
+
+.searchBar {
+    position: relative;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.searchBar input {
+
+    width: 85%;
+    transition: 0.5s;
+    border: none;
+    padding: 5% 10% 5% 5%;
+    background-color: var(--grey);
+    border-radius: 30px;
+    outline: none;
+}
+
+.searchBar input::placeholder {
+
+    color: rgb(34, 34, 34);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
+.searchBar button{
+    position: absolute;
+    transition: 0.5s;
+    height: 5vh;
+    width: 5vh;
+    background-color: var(--blue);
+    border-radius: 100%;
+    left: 90%;
+    border: none;
+
+
+}
+
+.searchBar button img{
+    width: 45%;
+    padding-top: 10%;
+}
+
+.searchBar input:hover {
+
+    background-color: var(--dark-grey);
+
+}
+
+.searchBar button:hover{
+
+    background-color: var(--light-blue);
+    filter: drop-shadow(0 0 5px var(--dark-blue));
+
+}
+
+/* FIN SEARCH BAR */
+
+/* DROPDOWN */
+
+.navDiv .dropDown{
+
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: white;
+    width: 10vw;
+    font-size: 0.7em;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.dropDown li{
+
+    padding: 10%;
+
+}
+
+.dropDown li:hover{
+    color: var(--blue);
+}
+
+.navDiv ul li:hover .dropDown{
+    display: flex;
+}
+
+/* FIN DROPDOWN */
+
+/* FIN NAV */
+
+/* MAIN */
+
+main {
+
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+
+    padding: 0;
+    margin: 0;
+}
+
+.banner {
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.banner h2 {
+    margin-top: 5%;
+    font-size: 2.5em;
+    color: var(--blue);
+}
+
+.banner p {
+    margin-top: 2%;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.banner img{
+    margin: 5% 0 5% 0;
+}
+
+/* FORM */
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.form form {
+
+    width: 60%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 4%;
+
+    background-color: var(--grey);
+    border-radius: 15px;
+    filter: drop-shadow(0 0 10px var(--grey));
+
+    margin: 0;
+}
+
+/* FORM DATA */
+
+.form .data {
+
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+
+}
+
+.form .data label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.form .data input {
+
+    height: 70%;
+
+}
+
+/* DATA HEADER */
+
+.form .header{
+
+    margin-bottom: 5%;
+
+}
+
+.form .header h1 {
+
+    font-size: 1.5em;
+    text-align: center;
+
+}
+
+.form .header h2 {
+
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+/* FIN DATA HEADER */
+
+/* FIN FORM DATA */
+
+/* FORM INPUTS */
+
+.form input {
+
+    border: none;
+    background-color: var(--dark-grey);
+    width: 60%;
+    height: 55%;
+    border-radius: 5px;
+    padding-left: 2%;
+    outline: none;
+}
+
+.form input:hover{
+
+    background-color: var(--darkest-grey);
+
+}
+
+/* FIN FORM INPUTS */
+
+/* FORM LABELS */
+
+.form label {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: 500;
+
+}
+
+/* FIN FORM LABELS */
+
+/* TEXTAREA */
+
+.form textarea {
+    border: none;
+    background-color: var(--dark-grey);
+    width: 60%;
+    border-radius: 5px;
+
+    padding: 2% 0% 0 2%;
+    resize: none;
+    outline: none;
+}
+
+.form textarea:hover{
+
+    background-color: var(--darkest-grey);
+
+}
+
+.form textarea::placeholder{
+
+    color: rgb(34, 34, 34);
+
+}
+
+/* FIN TEXTAREA*/
+
+/* FORM BUTTON */
+
+.form button {
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 10px;
+    padding: 2% 5% 2% 5%;
+    transition: 0.5s;
+}
+
+.form button:hover{
+
+    background-color: var(--light-blue);
+    filter: drop-shadow(0 0 10px var(--light-blue));
+
+}
+
+/* FIN FORM BUTTON */
+
+/* FIN FORM */
+
+/* FIN MAIN */
+
+/* FOOTER */
+
+footer{
+
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    
+    background-color: var(--blue);
+    color: white;
+
+}
+footer h2 span{
+    font-size: 0.5em;
+    font-style: italic;
+}
+footer p a, footer p a:visited{
+    color: white;
+}
+
+/* FIN FOOTER */
+
+/* FORM VERIFCATION! */
+
+.oculto {
+    display: none;
+}
+
+#NombreAlert,#ApeAlert,#EmailAlert{
+    position: absolute;
+    font-size: 0.8em;
+    color: #C7312A;
+    width: 100%;
+}
+
+#NombreAlert{
+    top: 85%;
+}
+#ApeAlert{
+    top: 90%;
+}
+#EmailAlert{
+    top: 95%;
+}
+
+/* END FORM VERFICATION */
