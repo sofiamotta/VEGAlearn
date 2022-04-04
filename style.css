@@ -1079,6 +1079,14 @@ footer p a:visited {
       display: flex;
       flex-direction: column;  
     }
+
+    #NavDrop ul li ul li{
+        
+        font-size: 1em;
+        margin: 2.5% 0;
+        
+    }
+
     /* HAMBURGESA */
 
 }
@@ -1128,6 +1136,13 @@ footer p a:visited {
     #NavDrop{
 
         padding: 2% 0 4% 0;
+        
+    }
+
+    #NavDrop ul li ul li{
+        
+        font-size: 0.8em;
+        margin: 2.5% 0;
         
     }
 

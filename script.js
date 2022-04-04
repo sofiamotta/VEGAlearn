@@ -48,7 +48,12 @@ function validarForm() {
             emailAlert.innerHTML = "*El email no puede estar vacío";
         }
     }
+    if(!nombreErr && !apeErr && !emailErr){
+        nombre.value = "";
+        apellido.value = "";
+        email.value = "";
 
+    }
     hide();
 }
 
