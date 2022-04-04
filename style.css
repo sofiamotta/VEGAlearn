@@ -500,6 +500,19 @@ footer p a:visited {
 
 /* END FORM VERFICATION */
 
+/* HAMBURGESA */
+#Ham{
+    display: none;
+}
+#NavDrop{
+    display: none;
+}
+
+#NavDrop.oculto{
+    display: none;
+}
+/* END HAMBURGESA */
+
 /* MEDIA QUERIES */
 
 @media (max-width: 2560px) {
@@ -929,6 +942,12 @@ footer p a:visited {
 
     /* NAV */
 
+    .navDiv{
+
+        filter: none;
+
+    }
+
     .navDiv nav {
 
         display: none;
@@ -1027,6 +1046,40 @@ footer p a:visited {
 
     /*  FOOTER */
 
+    /* HAMBURGESA */
+    #Ham{
+        display: inline-block;
+        font-size: 2.5em;
+        color: var(--blue);
+    }
+
+    #NavDrop{
+        display: flex;
+        padding: 2% 0 2.5% 0;
+        background-color: white;
+        filter: drop-shadow(0 0 10px var(--grey));
+        
+    }
+    #NavDrop ul{
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;   
+        justify-content: space-around;
+    }
+    #NavDrop a{
+        font-weight: 600;
+        color: var(--blue);
+    }
+    #NavDrop a:hover{
+        color: black;
+    }
+    #NavDrop ul li ul{
+      display: flex;
+      flex-direction: column;  
+    }
+    /* HAMBURGESA */
 
 }
 @media (max-width: 768px) {
@@ -1062,6 +1115,21 @@ footer p a:visited {
 
 }
 @media (max-width: 525px){
+
+
+    /* HAMBURGESA */
+    #Ham{
+        display: inline-block;
+        font-size: 2.5em;
+        margin: 5% 0 0 0;
+        color: #1616C7;
+    }
+
+    #NavDrop{
+
+        padding: 2% 0 4% 0;
+        
+    }
 
     /* NAV */
 

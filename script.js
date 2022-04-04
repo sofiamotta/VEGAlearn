@@ -7,6 +7,22 @@ let nombreAlert = document.getElementById("NombreAlert");
 let apeAlert = document.getElementById("ApeAlert");
 let emailAlert = document.getElementById("EmailAlert");
 
+let ham = document.getElementById("Ham");
+let nav = document.getElementById("NavDrop");
+let isShown = false;
+nav.classList.add(oculto)
+
+ham.addEventListener("click",()=>{
+    if(isShown){
+        nav.classList.add(oculto)
+        isShown = false;    
+    }
+    else{
+        isShown = true; 
+        nav.classList.remove(oculto);
+    }
+})
+
 function validarForm() {
 
     let nombreErr = (nombre.value == "");
